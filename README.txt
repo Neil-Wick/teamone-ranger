@@ -86,7 +86,7 @@ Installation Host Information
     (i)  Kylin plugin needs to be installed on Kylin hosts
     (j)  Elasticsearch plugin needs to be installed on Elasticsearch hosts
 
-Installation Process
+Installation Proces
 ~~~~~~~~~~~~~~~~~~~~
 
 1. Download the tar.gz file into a temporary folder in the box where it needs to be installed.
