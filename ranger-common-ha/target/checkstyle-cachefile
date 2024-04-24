@@ -1,0 +1,15 @@
+#Tue Jun 27 11:08:58 CST 2023
+/Users/neil/Documents/Program-workspace-files/source-workspaces/ranger-2.1.0/ranger-common-ha/src/main/java/org/apache/ranger/ha/RangerServiceServerIdSelector.java=1687832478000
+/Users/neil/Documents/Program-workspace-files/source-workspaces/ranger-2.1.0/ranger-common-ha/src/main/java/org/apache/ranger/ha/ServiceState.java=1687832478000
+/Users/neil/Documents/Program-workspace-files/source-workspaces/ranger-2.1.0/ranger-common-ha/src/main/java/org/apache/ranger/ha/ActiveStateChangeHandler.java=1687832478000
+/Users/neil/Documents/Program-workspace-files/source-workspaces/ranger-2.1.0/ranger-common-ha/src/main/java/org/apache/ranger/RangerHAInitializer.java=1687832478000
+/Users/neil/Documents/Program-workspace-files/source-workspaces/ranger-2.1.0/ranger-common-ha/src/main/java/org/apache/ranger/ha/service/ServiceManager.java=1687832478000
+/Users/neil/Documents/Program-workspace-files/source-workspaces/ranger-2.1.0/ranger-common-ha/src/main/java/org/apache/ranger/ha/service/HARangerService.java=1687832478000
+/Users/neil/Documents/Program-workspace-files/source-workspaces/ranger-2.1.0/ranger-common-ha/src/main/java/org/apache/ranger/ha/HAConfiguration.java=1687832478000
+/Users/neil/Documents/Program-workspace-files/source-workspaces/ranger-2.1.0/ranger-common-ha/src/main/java/org/apache/ranger/ha/CuratorFactory.java=1687832478000
+/Users/neil/Documents/Program-workspace-files/source-workspaces/ranger-2.1.0/ranger-common-ha/src/test/java/org/apache/ranger/ha/service/TestRangerServiceServerIdSelector.java=1687832478000
+/Users/neil/Documents/Program-workspace-files/source-workspaces/ranger-2.1.0/ranger-common-ha/src/main/java/org/apache/ranger/ha/ActiveInstanceState.java=1687832478000
+/Users/neil/Documents/Program-workspace-files/source-workspaces/ranger-2.1.0/ranger-common-ha/src/main/java/org/apache/ranger/ha/annotation/HAService.java=1687832478000
+/Users/neil/Documents/Program-workspace-files/source-workspaces/ranger-2.1.0/ranger-common-ha/src/main/java/org/apache/ranger/ha/ActiveInstanceElectorService.java=1687832478000
+configuration*?=8038B29E2C74EB17B632E81E63AEA1D65340C2C4
+/Users/neil/Documents/Program-workspace-files/source-workspaces/ranger-2.1.0/ranger-common-ha/src/main/java/org/apache/ranger/ha/ZookeeperSecurityProperties.java=1687832478000

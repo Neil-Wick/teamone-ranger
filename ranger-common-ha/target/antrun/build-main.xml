@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="maven-antrun-" default="main"  >
+<target name="main">
+  <echo file="/Users/neil/Documents/Program-workspace-files/source-workspaces/ranger-2.1.0/ranger-common-ha/target/version" message="3.0.0-SNAPSHOT"/>
+</target>
+</project>

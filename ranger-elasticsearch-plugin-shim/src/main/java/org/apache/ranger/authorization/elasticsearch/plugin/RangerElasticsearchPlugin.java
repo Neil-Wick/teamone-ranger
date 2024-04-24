@@ -44,12 +44,11 @@ import org.elasticsearch.rest.RestHandler;
 import org.elasticsearch.script.ScriptService;
 import org.elasticsearch.threadpool.ThreadPool;
 import org.elasticsearch.watcher.ResourceWatcherService;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+
 
 public class RangerElasticsearchPlugin extends Plugin implements ActionPlugin {
 
-	private static final Logger LOG = LoggerFactory.getLogger(RangerElasticsearchPlugin.class);
+//	private static final Logger LOG = LoggerFactory.getLogger(RangerElasticsearchPlugin.class);
 
 	private static final String RANGER_ELASTICSEARCH_PLUGIN_CONF_NAME = "ranger-elasticsearch-plugin";
 
@@ -59,7 +58,7 @@ public class RangerElasticsearchPlugin extends Plugin implements ActionPlugin {
 
 	public RangerElasticsearchPlugin(Settings settings) {
 		this.settings = settings;
-		LOG.debug("settings:"+this.settings);
+//		LOG.debug("settings:"+this.settings);
 	}
 
 	@Override
@@ -92,8 +91,8 @@ public class RangerElasticsearchPlugin extends Plugin implements ActionPlugin {
 	private void addPluginConfig2Classpath(Environment environment) {
 		Path configPath = environment.configFile().resolve(RANGER_ELASTICSEARCH_PLUGIN_CONF_NAME);
 		if (configPath == null) {
-			LOG.error(
-					"Failed to add ranger elasticsearch plugin config directory [ranger-elasticsearch-plugin] to classpath.");
+//			LOG.error(
+//					"Failed to add ranger elasticsearch plugin config directory [ranger-elasticsearch-plugin] to classpath.");
 			return;
 		}
 		File configFile = configPath.toFile();
@@ -108,14 +107,14 @@ public class RangerElasticsearchPlugin extends Plugin implements ActionPlugin {
 					Method method = urlClass.getSuperclass().getDeclaredMethod("addURL", new Class[] { URL.class });
 					method.setAccessible(true);
 					method.invoke(urlClassLoader, new Object[] { configFile.toURI().toURL() });
-					LOG.info("Success to add ranger elasticsearch plugin config directory [{}] to classpath.",
-							configFile.getCanonicalPath());
+//					LOG.info("Success to add ranger elasticsearch plugin config directory [{}] to classpath.",
+//							configFile.getCanonicalPath());
 				}
 			}
 		} catch (Exception e) {
-			LOG.error(
-					"Failed to add ranger elasticsearch plugin config directory [ranger-elasticsearch-plugin] to classpath.",
-					e);
+//			LOG.error(
+//					"Failed to add ranger elasticsearch plugin config directory [ranger-elasticsearch-plugin] to classpath.",
+//					e);
 			throw new RuntimeException(e);
 		}
 	}

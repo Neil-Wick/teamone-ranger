@@ -142,8 +142,10 @@ public class ElasticSearchUtil {
         searchSourceBuilder.size(searchCriteria.getMaxRows());
         searchSourceBuilder.fetchSource(true);
         SearchRequest query = new SearchRequest();
+
         query.indices(index);
         query.source(searchSourceBuilder.query(boolQueryBuilder));
+
         return client.search(query, RequestOptions.DEFAULT);
     }
 

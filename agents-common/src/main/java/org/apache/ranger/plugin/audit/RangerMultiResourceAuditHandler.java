@@ -38,11 +38,13 @@ public class RangerMultiResourceAuditHandler extends RangerDefaultAuditHandler {
 	@Override
 	public void logAuthzAudit(AuthzAuditEvent auditEvent) {
 		auditEvents.add(auditEvent);
+
 	}
 
 	@Override
 	public void logAuthzAudits(Collection<AuthzAuditEvent> auditEvents) {
 		this.auditEvents.addAll(auditEvents);
+
 	}
 
 	public void flushAudit() {
@@ -60,7 +62,7 @@ public class RangerMultiResourceAuditHandler extends RangerDefaultAuditHandler {
 				if (deniedExists && auditEvent.getAccessResult() != 0) {
 					continue;
 				}
-
+				LOG.warn("RangerMultiResourceAuditHandler---flushAudit---"+auditEvent.toString());
 				super.logAuthzAudit(auditEvent);
 			}
 		} catch (Throwable t) {

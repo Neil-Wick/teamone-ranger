@@ -80,8 +80,14 @@ public class ElasticSearchAuditDestination extends AuditDestination {
     private String hosts;
     private Subject subject;
 
+    private BulkRequest bulkRequest ;
+
     public ElasticSearchAuditDestination() {
         propPrefix = CONFIG_PREFIX;
+    }
+
+    public String getBulkRequest() {
+       return bulkRequest.toString();
     }
 
 
@@ -96,6 +102,7 @@ public class ElasticSearchAuditDestination extends AuditDestination {
         this.hosts = getHosts();
         LOG.info("Connecting to ElasticSearch: " + connectionString());
         getClient(); // Initialize client
+//        this.bulkRequest = new BulkRequest();
     }
 
     private String connectionString() {
@@ -123,18 +130,20 @@ public class ElasticSearchAuditDestination extends AuditDestination {
             }
 
             ArrayList<AuditEventBase> eventList = new ArrayList<>(events);
-            BulkRequest bulkRequest = new BulkRequest();
+            bulkRequest = new BulkRequest();
             try {
                 for (AuditEventBase event : eventList) {
                     AuthzAuditEvent authzEvent = (AuthzAuditEvent) event;
                     String id = authzEvent.getEventId();
                     Map<String, Object> doc = toDoc(authzEvent);
-                    bulkRequest.add(new IndexRequest(index).id(id).source(doc));
+                    bulkRequest.add(new IndexRequest(index,"_doc").id(id).source(doc));
                 }
             } catch (Exception ex) {
                 addFailedCount(eventList.size());
                 logFailedEvent(eventList, ex);
             }
+
+
             BulkResponse response = client.bulk(bulkRequest, RequestOptions.DEFAULT);
             if (response.status().getStatus() >= 400) {
                 addFailedCount(eventList.size());
@@ -182,6 +191,7 @@ public class ElasticSearchAuditDestination extends AuditDestination {
             synchronized (ElasticSearchAuditDestination.class) {
                 if (client == null) {
                     client = newClient();
+//                    LOG.warn("client is already got!!!");
                 }
             }
         }
