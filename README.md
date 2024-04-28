@@ -22,7 +22,7 @@ Teamone Ranger 是基于 Apache Ranger 2.1.1 修改的适用于希望将 Elastic
 2. Ranger 2.1.1 版本支持的 ElasticSearch 7.1.3 修改到支持 ElasticSearch 6.8.23
 3. Ranger 2.1.1 版本对于 ElasticSearch 审计日志，权限管理的调整
  
-# 安装指南可参考官方文档：
+# 安装指南可参考官方文档
 
 Check Apache Ranger Wiki for up to date instruction: 
 https://cwiki.apache.org/confluence/display/RANGER/Index
