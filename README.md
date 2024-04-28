@@ -1,17 +1,28 @@
-# Licensed to the Apache Software Foundation (ASF) under one or more
-# contributor license agreements.  See the NOTICE file distributed with
-# this work for additional information regarding copyright ownership.
-# The ASF licenses this file to You under the Apache License, Version 2.0
-# (the "License"); you may not use this file except in compliance with
-# the License.  You may obtain a copy of the License at
-#
-#     http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
+Licensed to the Apache Software Foundation (ASF) under one or more
+contributor license agreements.  See the NOTICE file distributed with
+this work for additional information regarding copyright ownership.
+The ASF licenses this file to You under the Apache License, Version 2.0
+(the "License"); you may not use this file except in compliance with
+the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+
+# Teamone Ranger
+Teamone Ranger 是基于 Apache Ranger 2.1.1 修改的适用于希望将 ElasticSearch 作为审计日志输出，同时解决低版本Hadoop兼容问题
+
+# 主要特性
+1. Ranger 2.1.1 版本支持的 Hadoop 3.1.1 修改到支持 Hadoop 2.7.7
+2. Ranger 2.1.1 版本支持的 ElasticSearch 7.1.3 修改到支持 ElasticSearch 6.8.23
+3. Ranger 2.1.1 版本对于 ElasticSearch 审计日志，权限管理的调整
+ 
+# 安装指南可参考官方文档：
 
 Check Apache Ranger Wiki for up to date instruction: 
 https://cwiki.apache.org/confluence/display/RANGER/Index
